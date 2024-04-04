@@ -36,6 +36,7 @@ func main() {
 
 	// Extract the query string after the ?.
 	fmt.Println(u.RawQuery)
+	// Parse into a map of key/value pairs.
 	m, _ := url.ParseQuery(u.RawQuery)
 	fmt.Println(m)
 	fmt.Println(m["k"][0])
