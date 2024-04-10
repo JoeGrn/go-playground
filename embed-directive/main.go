@@ -2,6 +2,7 @@ package main
 
 import (
 	"embed"
+	"fmt"
 )
 
 // go:embed is a compiler directive
@@ -25,11 +26,11 @@ var fileByte []byte
 var folder embed.FS
 
 func main() {
-	print(fileString)
-	print(string(fileByte))
+	fmt.Println(fileString)
+	fmt.Println(string(fileByte))
 
 	content1, _ := folder.ReadFile("folder/file1.hash")
-	print(string(content1))
+	fmt.Println(string(content1))
 	content2, _ := folder.ReadFile("folder/file2.hash")
-	print(string(content2))
+	fmt.Println(string(content2))
 }
