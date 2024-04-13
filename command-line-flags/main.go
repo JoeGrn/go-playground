@@ -1,7 +1,7 @@
 package main
 
-// $ go build command-line-flags.go
-// $ ./command-line-flags -word=opt -numb=7 -fork -svar=flag
+// $ go build main.go
+// $ ./main -word=opt -numb=7 -fork -svar=flag
 
 import (
 	"flag"
