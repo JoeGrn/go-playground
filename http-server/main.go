@@ -26,5 +26,6 @@ func main() {
 	http.HandleFunc("/headers", headers)
 
 	// start the server
+	// nil means to use the default server mux
 	http.ListenAndServe(":8090", nil)
 }

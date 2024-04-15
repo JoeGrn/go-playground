@@ -7,6 +7,10 @@ import (
 	"time"
 )
 
+// context contains information about the environment its executed in
+// useful if a client disconnects or a timeout occurs
+// so the server can save resource and stop serving the request
+
 func hello(w http.ResponseWriter, r *http.Request) {
 	// create a context for each request
 	ctx := r.Context()
